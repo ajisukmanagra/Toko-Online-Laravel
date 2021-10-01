@@ -52,12 +52,6 @@ php artisan migrate --seed
 
 ```bash
 php artisan serve
-```
-
-## Author
-
--   Facebook : <a href="https://web.facebook.com/adhiariyadi.me/"> Adhi Ariyadi</a>
--   LinkedIn : <a href="https://www.linkedin.com/in/adhiariyadi/"> Adhi Ariyadi</a>
 
 ## Contributing
 
