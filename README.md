@@ -2,7 +2,7 @@
 
 ## Apa itu Toko Online?
 
-Web Toko Online yang dibuat oleh <a href="https://github.com/adhiariyadi"> Adhi Ariyadi </a>. **Toko Online adalah Website penjualan secara online untuk seseorang yang inggin membeli suatu produk melalui website dengan mudah.**
+Web Toko Online yang dibuat oleh**Toko Online adalah Website penjualan secara online untuk seseorang yang inggin membeli suatu produk melalui website dengan mudah.**
 
 ## Fitur apa saja yang tersedia di Toko Online?
 
