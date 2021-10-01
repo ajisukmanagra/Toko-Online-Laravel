@@ -22,14 +22,14 @@
       <ul class="nav navbar-nav left-sidebar-menu-pro">
         <li class="nav-item"><a href="/" class="nav-link dropdown-toggle"><i class="fa big-icon fa-home"></i> <span class="mini-dn">Home</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a></li>
         <li class="nav-item">
-          <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-shopping-bag"></i> <span class="mini-dn">Order</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
+          <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-shopping-cart"></i> <span class="mini-dn">Order</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
           <div role="menu" class="dropdown-menu left-menu-dropdown animated flipInX">
             <a href="{{ route('order.index') }}" class="dropdown-item">List Order</a>
             <a href="{{ route('order.tampil_cancel') }}" class="dropdown-item">List Batal Order</a>
           </div>
         </li>
         <li class="nav-item">
-          <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-car"></i> <span class="mini-dn">Mobil</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
+          <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-car"></i> <span class="mini-dn">Makanan</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
           <div role="menu" class="dropdown-menu left-menu-dropdown animated flipInX">
             <a href="{{ route('mobil.index') }}" class="dropdown-item">List Mobil</a>
             <a href="{{ route('mobil.tampil_hapus') }}" class="dropdown-item">List Mobil Dihapus</a>

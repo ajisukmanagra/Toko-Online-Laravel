@@ -9,7 +9,7 @@
   					<div class="row">
   						<div class="col-xl-6 col-lg-7 text-white">
   							<span>New Arrivals</span>
-  							<h2>Sport Car</h2>
+  							<h2>Sport produck</h2>
   							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum sus-pendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
   							<a href="#" class="site-btn sb-line">DISCOVER</a>
   							<a href="{{ url('add-to-cart/'.$val->id) }}" class="site-btn sb-white">ADD TO CART</a>

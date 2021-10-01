@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-10">
             <!-- /.login-logo -->
             <div class="card">
               <div class="card-body login-card-body">
@@ -29,7 +29,6 @@
                       </div>
                     </div>
                   </div>
-
                   <div class="input-group mb-3">
                     <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
                     <div class="col-md-6">
@@ -48,7 +47,6 @@
                       </div>
                     </div>
                   </div>
-
                   <div class="row">
                     <div class="col-7 pl-3">
                       <div class="icheck-primary">
@@ -59,7 +57,7 @@
                       </div>
                     </div>
                     <!-- /.col -->
-                    <div class="col-5">
+                    <div class="col-3">
                       <button type="submit" class="btn btn-primary btn-block">
                         {{ __('Login') }}
                       </button>
@@ -67,8 +65,6 @@
                     <!-- /.col -->
                   </div>
                 </form>
-
-
                 <p class="mb-1">
                   @if (Route::has('password.request'))
                     <a class="btn btn-link" href="{{ route('password.request') }}">

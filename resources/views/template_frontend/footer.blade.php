@@ -5,7 +5,7 @@
 				<div class="col-md-4">
 					<div class="footer-widget about-widget">
 						<h2>About</h2>
-						<p>Donec vitae purus nunc. Morbi faucibus erat sit amet congue mattis. Nullam frin-gilla faucibus urna, id dapibus erat iaculis ut. Integer ac sem.</p>
+						<p>Mager Jajan Hadir Di SMK Nurul Islam Cianjur</p>
 						<img src="{{ asset('user/img/cards.png') }}" alt="">
 					</div>
 				</div>
@@ -35,14 +35,14 @@
 			<div class="container">
 				<div class="social-links">
 					<a target="_blank" href="https://www.facebook.com/adhiariyadi.me/" class="facebook"><i class="fa fa-facebook"></i><span>Facebook</span></a>
-					<a target="_blank" href="https://t.me/adhiariyadi" class="telegram"><i class="fa fa-telegram"></i><span>Telegram</span></a>
-					<a target="_blank" href="https://www.instagram.com/adhiariyadi_/" class="instagram"><i class="fa fa-instagram"></i><span>Instagram</span></a>
-					<a target="_blank" href="https://github.com/adhiariyadi/" class="github"><i class="fa fa-github"></i><span>github</span></a>
+					<a target="_blank" href="https://t.me/apkmagerjajan" class="telegram"><i class="fa fa-telegram"></i><span>Telegram</span></a>
+					<a target="_blank" href="https://www.instagram.com/azis_official27/" class="instagram"><i class="fa fa-instagram"></i><span>Instagram</span></a>
+					
 					<a target="_blank" href="https://twitter.com/adhiariyadi_" class="twitter"><i class="fa fa-twitter"></i><span>Twitter</span></a>
-					<a target="_blank" href="https://api.whatsapp.com/send?phone=6281246835129" class="whatsapp"><i class="fa fa-whatsapp"></i><span>Whatsapp</span></a>
-					<a target="_blank" href="https://www.youtube.com/channel/UCSU_al9Rti8l4AQtgb4dZlg?view_as=subscriber" class="youtube"><i class="fa fa-youtube"></i><span>Youtube</span></a>
+					<a target="_blank" href="https://api.whatsapp.com/send?phone=62895327384798" class="whatsapp"><i class="fa fa-whatsapp"></i><span>Whatsapp</span></a>
+					<a target="_blank" href="https://www.youtube.com/channel/UCs8TFbCjAex3glbDxUn7ENQ" class="youtube"><i class="fa fa-youtube"></i><span>Youtube</span></a>
 				</div>
-				<p class="text-white text-center mt-5">Copyright &copy; @if(date('Y') == '2019') {{ date('Y') }} @else 2019 - {{ date('Y') }} @endif All rights reserved <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://github.com/adhiariyadi/" target="_blank">Adhi Ariyadi</a>.</p>
+				<p class="text-white text-center mt-5">Copyright &copy; @if(date('Y') == '2019') {{ date('Y') }} @else 2019 - {{ date('Y') }} @endif All rights reserved <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://github.com/adhiariyadi/" target="_blank">Aji Sukma Nagara</a>.</p>
 			</div>
 		</div>
 	</section>

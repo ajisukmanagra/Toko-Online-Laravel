@@ -18,7 +18,7 @@
                   <i class="flaticon-bag"></i>
                   <span>{{ count((array) session('cart')) }}</span>
                 </div>
-                <a href="{{ route('cart') }}">Shopping Cart</a>
+                <a href="{{ route('cart') }}">Shopping produck</a>
               @endif
             </div>
             <div class="up-item ml-4">
