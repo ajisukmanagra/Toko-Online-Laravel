@@ -52,8 +52,3 @@ php artisan migrate --seed
 
 ```bash
 php artisan serve
-
-## Contributing
-
-Contributions, issues and feature requests di persilahkan.
-Jangan ragu untuk memeriksa halaman masalah jika Anda ingin berkontribusi. **Berhubung Project ini saya sudah selesaikan sendiri, namun banyak fitur yang kalian dapat tambahkan silahkan berkontribusi yaa!**
