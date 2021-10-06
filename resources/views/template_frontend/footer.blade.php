@@ -42,7 +42,7 @@
 					<a target="_blank" href="https://api.whatsapp.com/send?phone=62895327384798" class="whatsapp"><i class="fa fa-whatsapp"></i><span>Whatsapp</span></a>
 					<a target="_blank" href="https://www.youtube.com/channel/UCs8TFbCjAex3glbDxUn7ENQ" class="youtube"><i class="fa fa-youtube"></i><span>Youtube</span></a>
 				</div>
-				<p class="text-white text-center mt-5">Copyright &copy; @if(date('Y') == '2019') {{ date('Y') }} @else 2019 - {{ date('Y') }} @endif All rights reserved <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://github.com/adhiariyadi/" target="_blank">Aji Sukma Nagara</a>.</p>
+				<p class="text-white text-center mt-5">Copyright &copy; @if(date('Y') == '2019') {{ date('Y') }} @else 2019 - {{ date('Y') }} @endif All rights reserved <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://github.com/adhiariyadi/" target="_blank"></a>.</p>
 			</div>
 		</div>
 	</section>

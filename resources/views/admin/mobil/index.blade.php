@@ -13,10 +13,10 @@
       <table class="table table-striped table-hover table-sm table-bordered">
         <tr>
           <th>No</th>
-          <th>Merek Mobil</th>
-          <th>Type Mobil</th>
-          <th>price</th>
-          <th>Thumbnail</th>
+          <th>katagori produk</th>
+          <th>nama produk</th>
+          <th>harga</th>
+          <th>Gambar</th>
           <th>Action</th>
         </tr>
         @foreach ($mobil as $result => $d)
@@ -24,7 +24,7 @@
             <td>{{ $result + $mobil->firstitem() }}</td>
             <td>{{ $d->merek->name }}</td>
             <td>{{ $d->type }}</td>
-            <td>$ {{ $d->price }}</td>
+            <td>RP. {{ $d->price }}</td>
             <td>
               <img src="{{ asset( $d->gambar ) }}" class="img-fluid" width="100" alt="">
             </td>

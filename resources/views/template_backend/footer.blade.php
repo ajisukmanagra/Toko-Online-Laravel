@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="footer-copy-right">
-          <p>Copyright &copy; @if(date('Y') == '2019') {{ date('Y') }} @else 2019 - {{ date('Y') }} @endif All rights reserved <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://github.com/adhiariyadi/" target="_blank">Adhi Ariyadi</a>.</p>
+          <p>Copyright &copy; @if(date('Y') == '2021') {{ date('Y') }} @else 2022 - {{ date('Y') }} @endif All rights reserved <i class="fas fa-school" aria-hidden="true"></i> by <a href="https://github.com/ajisukmanagra/Toko-Online-Laravel" target="_blank"></a>.</p>
         </div>
       </div>
     </div>
