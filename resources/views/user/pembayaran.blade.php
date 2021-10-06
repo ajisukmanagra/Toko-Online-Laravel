@@ -46,7 +46,7 @@
 				<div class="col-lg-4 order-1 order-lg-2">
 					<div class="checkout-cart mb-5">
             <ul class="price-list">
-              <li>Sub Total<span style="width: 120px;">$ {{ number_format($order->total, 0) }}</span></li>
+              <li>Sub Total<span style="width: 120px;">Rp. {{ number_format($order->total, 0) }}</span></li>
               <li>PPN<span style="width: 120px;">10%</span></li>
               @php
                 $order->total += ($order->total * 10 / 100)
@@ -60,12 +60,12 @@
               <li>
                 <div class="pl-thumb mt-3"><img src="{{ asset('img/logo bca.png') }}" alt=""></div>
                 <h6 style="margin-top: -15px;">Bank Central Asia</h6>
-                <span>0021 3234<br>Adhi Ariyadi</span>
+                <span>0021 3234<br>KANTIN SEKOLAH</span>
               </li>
               <li>
                 <div class="pl-thumb"><img src="{{ asset('img/logo mandiri.png') }}" alt=""></div>
                 <h6 style="margin-top: -15px;">Bank Mandiri</h6>
-                <span>0021 3234<br>Adhi Ariyadi</span>
+                <span>0021 3234<br>KANTIN SEKOLAH</span>
               </li>
             </ul>
 					</div>

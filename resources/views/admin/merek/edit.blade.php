@@ -15,12 +15,12 @@
         @csrf
         @method('patch')
         <div class="form-group">
-          <label>Merek Mobil</label>
+          <label>katagori produk</label>
           <input type="text" class="form-control" value="{{ $merek->name }}" name="name" autocomplete="off">
         </div>
 
         <div class="form-group">
-          <button class="btn btn-primary btn-block">Update Merek</button>
+          <button class="btn btn-primary btn-block">Update produk</button>
         </div>
       </form>
     </div>

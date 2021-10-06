@@ -20,10 +20,10 @@
       <form action="{{ route('mobil.store') }}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
-          <label>Merek</label>
+          <label>katagori</label>
           <div class="chosen-select-single mg-b-20">
             <select class="select2_demo_3 form-control" name="merek_id">
-              <option value="" holder>Pilih Merek</option>
+              <option value="" holder>Pilih katagori</option>
               @foreach ($merek as $d)
                 <option value="{{ $d->id }}">{{ $d->name }}</option>
               @endforeach
@@ -31,15 +31,15 @@
           </div>
         </div>
         <div class="form-group">
-          <label>Type</label>
-          <input type="text" class="form-control" name="type" placeholder="Type Mobil" autocomplete="off">
+          <label>Nama produk</label>
+          <input type="text" class="form-control" name="type" placeholder="nama produk" autocomplete="off">
         </div>
         <div class="form-group">
-          <label>Price</label>
-          <input type="number" class="form-control" name="price" placeholder="Price Mobil">
+          <label>harga</label>
+          <input type="number" class="form-control" name="price" placeholder="harga produk">
         </div>
         <div class="form-group">
-          <label for="exampleInputFile">Foto Mobil</label>
+          <label for="exampleInputFile">Foto produk</label>
           <div class="file-upload-inner ts-forms">
               <div class="input prepend-big-btn">
                   <label class="icon-right" for="prepend-big-btn">
@@ -55,7 +55,7 @@
         </div><br>
 
         <div class="form-group">
-          <button class="btn btn-primary btn-block">Simpan Mobil</button>
+          <button class="btn btn-primary btn-block">Simpan produk</button>
         </div>
       </form>
     </div>

@@ -35,7 +35,7 @@
       <!-- menu -->
       <ul class="main-menu">
         <li><a href="/">Home</a></li>
-        <li><a href="#">Brand</a>
+        <li><a href="#">katagori</a>
           <ul class="sub-menu">
             @foreach ($merek as $data)
               <li><a href="{{ route('category', $data->id) }}">{{ $data->name }}</a></li>

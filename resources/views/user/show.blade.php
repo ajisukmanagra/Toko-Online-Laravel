@@ -27,8 +27,8 @@
 				</div>
 				<div class="col-lg-6 product-details">
 					<h2 class="p-title">{{ $mobil->type }}</h2>
-					<h3 class="p-price">$ {{ number_format($mobil->price, 0) }}</h3>
-					<h2 class="p-title">Brand : <span>{{ $mobil->merek->name }}</span></h2>
+					<h3 class="p-price">RP. {{ number_format($mobil->price, 0) }}</h3>
+					<h2 class="p-title">katagori : <span>{{ $mobil->merek->name }}</span></h2>
 					<h4 class="p-stock">Available: <span>In Stock</span></h4>
 					<div class="p-rating">
 						<i class="fa fa-star-o"></i>
