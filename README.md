@@ -8,8 +8,8 @@ Web Toko Online yang dibuat oleh**Toko Online adalah Website penjualan secara on
 
 -   Autentikasi Admin
 -   User & CRUD
--   Merek & CRUD
--   Mobil & CRUD
+-   Produk & CRUD
+-   Produk & CRUD
 -   Order & CRUD
 -   Dan lain-lain
 
