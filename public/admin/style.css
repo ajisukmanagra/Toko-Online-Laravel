@@ -3312,7 +3312,7 @@ ul.profile-contact-menu {
 	height: 35px;
 }
 .file-upload-inner.ts-forms .file-button, .file-upload-inner.ts-forms .file-button:active, .file-upload-inner.ts-forms .file-button:focus{
-	background: linear-gradient(to bottom, #ff9966 0%, #d75151 100%);
+	background: linear-gradient(to bottom, #000 0%, #000 100%);
 	border-radius:0px;
 	width:70px;
 	height: 35px;
@@ -4053,13 +4053,13 @@ ul.breadcome-menu {
 	background: #ff9966;
 }
 .materialdesign .breadcome-heading .form-control, .breadcome-heading .form-control:focus {
-    border: 1px solid #ececec;
+    border: 1px solid #000;
     font-size: 13px;
     height: 34px;
     color: #fff;
     padding-left: 20px;
     padding-right: 40px;
-    background: linear-gradient(to bottom, #ff9966 0%, #d75151 100%);
+    background: linear-gradient(to bottom, #000 0%, #000 100%);
     box-shadow: none;
     border-radius: 30px;
     width: 200px;
