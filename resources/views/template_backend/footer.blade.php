@@ -110,5 +110,13 @@
 <script src="{{ asset('user/js/main.js') }}"></script>
 
 </body>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+  Swal.fire(
+  'Good job!',
+  'You clicked the button!',
+  'success'
+)
+</script>
 
 </html>

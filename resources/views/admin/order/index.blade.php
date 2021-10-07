@@ -13,7 +13,7 @@
         <tr>
           <th>No</th>
           <th>Nama User</th>
-          <th>Type Mobil</th>
+          <th>Nama Produck</th>
           <th>Quantity</th>
           <th>Harga</th>
           <th>Payment Status</th>
