@@ -27,15 +27,15 @@
 						<div class="row address-inputs justify-content-center">
 							<div class="col-md-11">
                 <div class="form-group">
-                  <label>Nama Bank</label>
-                  <input type="text" name="namaBank" placeholder="Nama Bank" autocomplete="off">
+                  <label>Nama Pesanan</label>
+                  <input type="text" name="namaBank" placeholder="Nama Pesanan" autocomplete="off">
                 </div>
                 <div class="form-group">
-                  <label>Nama Pengirim</label>
-                  <input type="text" name="namaPengirim" placeholder="Nama Pengirim" autocomplete="off">
+                  <label>Nama Pemesan</label>
+                  <input type="text" name="namaPengirim" placeholder="Nama Pemesan" autocomplete="off">
                 </div>
                 <div class="form-group">
-                  <label>Bukti Transfer Pembayaran</label><br>
+                  <label>foto Pemesan Produck</label><br>
                   <input type="file" name="gambar">
                 </div>
 							</div>
@@ -52,21 +52,6 @@
                 $order->total += ($order->total * 10 / 100)
               @endphp
               <li class="total">Total<span style="width: 120px;">$ {{ number_format($order->total, 0) }}</span></li>
-            </ul>
-					</div>
-					<div class="checkout-cart">
-            <h3>Payment</h3>
-            <ul class="product-list">
-              <li>
-                <div class="pl-thumb mt-3"><img src="{{ asset('img/logo bca.png') }}" alt=""></div>
-                <h6 style="margin-top: -15px;">Bank Central Asia</h6>
-                <span>0021 3234<br>KANTIN SEKOLAH</span>
-              </li>
-              <li>
-                <div class="pl-thumb"><img src="{{ asset('img/logo mandiri.png') }}" alt=""></div>
-                <h6 style="margin-top: -15px;">Bank Mandiri</h6>
-                <span>0021 3234<br>KANTIN SEKOLAH</span>
-              </li>
             </ul>
 					</div>
 				</div>

@@ -7,7 +7,7 @@
                 <div class="col-12 text-center">
                     <h2 class="mb-4">Yay! Finish</h2>
                     <img src="{{ asset('img/ic_success.png') }}" width="450" alt="">
-                    <h6 class="mt-2">Pembayaran anda berhasil<br>Mohon tunggu konfirmasi dari admin</h6>
+                    <h6 class="mt-2">Pemesanan anda berhasil<br>Mohon tunggu konfirmasi</h6>
                     <a href="{{ route('home') }}" class="btn btn-primary mt-5" style="width: 200px;">Back to Home</a>
                 </div>
             </div>
