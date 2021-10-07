@@ -112,11 +112,13 @@
 </body>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
-  Swal.fire(
-  'Good job!',
-  'You clicked the button!',
-  'success'
-)
+  Swal.fire({
+  position: 'center',
+  icon: 'success',
+  title: 'Success',
+  showConfirmButton: false,
+  timer: 1400
+})
 </script>
 
 </html>
