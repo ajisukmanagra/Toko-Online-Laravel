@@ -3,7 +3,7 @@
   <!-- Page info -->
   <div class="page-top-info">
     <div class="container">
-      <h4>Cart</h4>
+      <h4>Pesanan</h4>
       <div class="site-pagination">
         <a href="{{ route('home') }}">Home</a> /
         <a href="#">Produk</a>
