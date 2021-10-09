@@ -41,12 +41,12 @@
                                             <img src="{{ asset( $data->gambar ) }}" alt="">
                                             <div class="pi-links">
                                                 <a href="{{ url('add-to-cart/'.$data->id) }}" class="add-card"><i class="flaticon-bag"></i><span>ADD TO
-                                                        CART</span></a>
+                                                        PRODUC</span></a>
                                                 <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
                                             </div>
                                         </div>
                                         <div class="pi-text">
-                                            <h6>$ {{ number_format($data->price, 0) }}</h6>
+                                            <h6>Rp. {{ number_format($data->price, 0) }}</h6>
                                             <p>{{ $data->merek->name }} {{$data->type}}</p>
                                         </div>
                                     </div>
@@ -55,7 +55,7 @@
                             {{ $mobil->links() }}
                         @else
                             <div class="col-12 text-center">
-                                <h2>Tidak ada Mobil</h2>
+                                <h2>Tidak ada Produk</h2>
                             </div>
                         @endif
 					</div>

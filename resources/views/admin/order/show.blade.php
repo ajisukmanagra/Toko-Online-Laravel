@@ -6,7 +6,7 @@
             {{ Session('success') }}
         </div>
     @endif
-    
+
     <div class="contact-clients-area mg-b-40">
         <div class="container-fluid">
             <div class="row">
@@ -20,7 +20,7 @@
                                 </div><br>
                                 <div class="contact-client-address">
                                     <h3>Quantity: {{ $order->quantity }}</h3>
-                                    <h3>Total: $ {{ number_format( $order->total , 0) }}</h3><br>
+                                    <h3>Total: Rp. {{ number_format( $order->total , 0) }}</h3><br>
                                     <p class="address-client-ct client-addres-v2">Alamat: {{ $user->address }}, {{ $user->kelurahan }}, {{ $user->kecamatan }}, {{ $user->kabupaten }}, {{ $user->provinsi }}</p>
                                     <p>No. Telp: {{ $user->telepon }}</p>
                                 </div>

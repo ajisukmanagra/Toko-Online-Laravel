@@ -24,7 +24,7 @@
             <td>{{ $result + $mobil->firstitem() }}</td>
             <td>{{ $d->merek->name }}</td>
             <td>{{ $d->type }}</td>
-            <td>RP. {{ $d->price }}</td>
+            <td>Rp. {{ $d->price }}</td>
             <td>
               <img src="{{ asset( $d->gambar ) }}" class="img-fluid" width="100" alt="">
             </td>

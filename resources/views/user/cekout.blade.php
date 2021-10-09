@@ -103,12 +103,12 @@
 								@php
 								$total += $details['price'] * $details['quantity'];
 								@endphp
-								<li>Sub Total<span style="width: 120px;">$ {{ number_format($total, 0) }}</span></li>
+								<li>Sub Total<span style="width: 120px;">Rp. {{ number_format($total, 0) }}</span></li>
 								<li>PPN<span style="width: 120px;">10%</span></li>
 								@php
 									$total += ($total * 10 / 100)
 								@endphp
-								<li class="total">Total<span style="width: 120px;">$ {{ number_format($total, 0) }}</span></li>
+								<li class="total">Total<span style="width: 120px;">Rp.  {{ number_format($total, 0) }}</span></li>
 							</ul>
 						</div>
 					@endif

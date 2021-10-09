@@ -26,7 +26,7 @@
     							</div>
     						</div>
     						<div class="pi-text">
-                  				<h6><a href="{{ route('mobil.show', $data->mobil->id) }}">$ {{ number_format($data->mobil->price, 0) }}</a></h6>
+                  				<h6><a href="{{ route('mobil.show', $data->mobil->id) }}">Rp. {{ number_format($data->mobil->price, 0) }}</a></h6>
       							<p><a href="{{ route('mobil.show', $data->mobil->id) }}">{{ $data->mobil->merek->name }} {{$data->mobil->type}}</a></p>
     						</div>
     					</div>

@@ -12,7 +12,7 @@
   							<h2>Sport produck</h2>
   							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum sus-pendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
   							<a href="#" class="site-btn sb-line">DISCOVER</a>
-  							<a href="{{ url('add-to-cart/'.$val->id) }}" class="site-btn sb-white">ADD TO CART</a>
+  							<a href="{{ url('add-to-cart/'.$val->id) }}" class="site-btn sb-white">ADD TO PRODUK</a>
   						</div>
   					</div>
   				</div>
@@ -51,7 +51,7 @@
     						</div>
     					</div>
     					<div class="pi-text">
-    						<h6><a href="{{ route('mobil.show', $val->id) }}">$ {{ number_format($val->price, 0) }}</a></h6>
+    						<h6><a href="{{ route('mobil.show', $val->id) }}">Rp. {{ number_format($val->price, 0) }}</a></h6>
     						<p><a href="{{ route('mobil.show', $val->id) }}">{{ $val->merek->name }} {{$val->type}}</a></p>
     					</div>
     				</div>
@@ -80,7 +80,7 @@
 								@endif
                   				<a href="{{ route('mobil.show', $val->id) }}"><img src="{{ asset( $val->gambar ) }}" alt=""></a>
     							<div class="pi-links">
-									<a href="{{ url('add-to-cart/'.$val->id) }}" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+									<a href="{{ url('add-to-cart/'.$val->id) }}" class="add-card"><i class="flaticon-bag"></i><span>ADD TO PRODUK</span></a>
 									@if ($val->like($val->id))
 										<a href="{{ url('unlike/'.$val->id) }}" class="wishlist-btn"><i class="fa fa-heart"></i></a>
 									@else
@@ -89,7 +89,7 @@
     							</div>
     						</div>
     						<div class="pi-text">
-                  				<h6><a href="{{ route('mobil.show', $val->id) }}">$ {{ number_format($val->price, 0) }}</a></h6>
+                  				<h6><a href="{{ route('mobil.show', $val->id) }}">Rp. {{ number_format($val->price, 0) }}</a></h6>
       							<p><a href="{{ route('mobil.show', $val->id) }}">{{ $val->merek->name }} {{$val->type}}</a></p>
     						</div>
     					</div>

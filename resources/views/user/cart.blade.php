@@ -42,7 +42,7 @@
                       <img src="{{ $details['photo'] }}" alt="">
                       <div class="pc-title">
                         <h4>{{ $details['name'] }}</h4>
-                        <p>$ {{ number_format($details['price'], 0) }}</p>
+                        <p>Rp. {{ number_format($details['price'], 0) }}</p>
                       </div>
                     </td>
                     <td data-th="Quantity" class="quy-col">
@@ -56,7 +56,7 @@
                       <h4>{{ $details['brand'] }}</h4>
                     </td>
                     <td data-th="Price" class="total-col">
-                      <h4>$ {{ number_format( $details['price'] * $details['quantity'] , 0) }}</h4>
+                      <h4>Rp. {{ number_format( $details['price'] * $details['quantity'] , 0) }}</h4>
                       @php
                         $total += $details['price'] * $details['quantity'];
                       @endphp
@@ -72,21 +72,21 @@
               </table>
             </div>
             <div class="total-cost">
-              <h6>Total <span>$ {{ number_format($total, 0) }}</span></h6>
+              <h6>Total <span>Rp. {{ number_format($total, 0) }}</span></h6>
             </div>
           </div>
           @endif
         </div>
         <div class="col-lg-4 card-right">
           @if(session('cart'))
-          <a href="{{ route('cekout') }}" class="site-btn">Proceed to checkout</a>
+          <a href="{{ route('cekout') }}" class="site-btn">Proses to checkout</a>
           @endif
           <a href="{{ route('home') }}" class="site-btn sb-dark">Continue shopping</a>
         </div>
       </div>
     </div>
   </section>
-  
+
 	<!-- Related product section -->
 	<section class="related-product-section">
 		<div class="container">
@@ -105,12 +105,12 @@
                 @endif
                 <img src="{{ asset( $data->gambar ) }}" alt="">
                 <div class="pi-links">
-                  <a href="{{ url('add-to-cart/'.$data->id) }}" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+                  <a href="{{ url('add-to-cart/'.$data->id) }}" class="add-card"><i class="flaticon-bag"></i><span>ADD TO PRODUK</span></a>
                   <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
                 </div>
               </div>
               <div class="pi-text">
-                <h6>$ {{ number_format($data->price, 0) }}</h6>
+                <h6>Rp. {{ number_format($data->price, 0) }}</h6>
                 <p>{{ $data->merek->name }} {{$data->type}}</p>
               </div>
             </div>

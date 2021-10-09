@@ -27,7 +27,7 @@
 				</div>
 				<div class="col-lg-6 product-details">
 					<h2 class="p-title">{{ $mobil->type }}</h2>
-					<h3 class="p-price">RP. {{ number_format($mobil->price, 0) }}</h3>
+					<h3 class="p-price">Rp. {{ number_format($mobil->price, 0) }}</h3>
 					<h2 class="p-title">katagori : <span>{{ $mobil->merek->name }}</span></h2>
 					<h4 class="p-stock">Available: <span>In Stock</span></h4>
 					<div class="p-rating">
@@ -50,7 +50,7 @@
 		</div>
 	</section>
 	<!-- product section end -->
-	
+
 	<!-- RELATED PRODUCTS section -->
 	<section class="related-product-section">
 		<div class="container">
@@ -68,7 +68,7 @@
 							</div>
 						</div>
 						<div class="pi-text">
-							<h6>$ {{ number_format($data->price, 0) }}</h6>
+							<h6>Rp. {{ number_format($data->price, 0) }}</h6>
 							<p>{{ $data->merek->name }} {{$data->type}}</p>
 						</div>
 					</div>

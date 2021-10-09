@@ -26,8 +26,8 @@
                         <div class="post-body">
                             <h3 class="post-title">{{ $data->namaMobil($data->mobil_id) }}</h3>
                             <h3 class="post-title">Quantity: {{ $data->quantity }}</h3>
-                            <h3 class="post-title">Total: $ {{ number_format( $data->total , 0) }}</h3>
-                            <h3 class="post-title">Status: 
+                            <h3 class="post-title">Total: Rp. {{ number_format( $data->total , 0) }}</h3>
+                            <h3 class="post-title">Status:
                                 @if ($data->payment_status == 'Sudah Dibayar')
                                     <span class="badge badge-success">{{ $data->payment_status }}</span>
                                 @elseif ($data->payment_status == 'Belum Dibayar')
