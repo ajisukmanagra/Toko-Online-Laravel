@@ -8,7 +8,7 @@
 		<div class="container">
 			<h4>Pembayaran</h4>
 			<div class="site-pagination">
-				<a href="{{ route('home') }}">Home</a> /
+				<a href="{{ route('home') }}">Home</a>
 				<a href="#">Pembayaran</a>
 			</div>
 		</div>

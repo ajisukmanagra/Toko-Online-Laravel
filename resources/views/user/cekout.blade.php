@@ -7,7 +7,7 @@
 			<h4>Cekout</h4>
 			<div class="site-pagination">
 				<a href="{{ route('home') }}">Home</a> /
-				<a href="#">Cekout</a>
+				<a href="#">Produk</a>
 			</div>
 		</div>
 	</div>
@@ -20,7 +20,7 @@
 				<div class="col-lg-8 order-2 order-lg-1">
 					<form class="checkout-form" method="post" action="{{ route('proses_cekout', Auth::user()->id) }}">
 						@csrf
-						<div class="cf-title">Billing Address</div>
+						<div class="cf-title">konfirmasi</div>
 						<div class="row address-inputs">
 							<div class="col-md-12">
 								@if(Auth::user()->name)
@@ -89,7 +89,7 @@
 					@endphp
 					@if(session('cart'))
 						<div class="checkout-cart">
-							<h3>Your Cart</h3>
+							<h3>Your Produk</h3>
 							<ul class="product-list">
 							@foreach(session('cart') as $id => $details)
 								<li>

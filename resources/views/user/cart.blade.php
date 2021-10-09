@@ -6,7 +6,7 @@
       <h4>Cart</h4>
       <div class="site-pagination">
         <a href="{{ route('home') }}">Home</a> /
-        <a href="#">Cart</a>
+        <a href="#">Produk</a>
       </div>
     </div>
   </div>
@@ -23,7 +23,7 @@
           @endphp
           @if(session('cart'))
           <div class="cart-table">
-            <h3>Your Cart</h3>
+            <h3>Your Produk</h3>
             <div class="cart-table-warp">
               <table>
                 <thead>
@@ -31,7 +31,7 @@
                     <th class="product-th">Product</th>
                     <th class="quy-th">Quantity</th>
                     <th class="size-th">Brand</th>
-                    <th class="total-th">Price</th>
+                    <th class="total-th">Harga</th>
                     <th class="total-th">Action</th>
                   </tr>
                 </thead>

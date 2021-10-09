@@ -9,8 +9,16 @@
   					<div class="row">
   						<div class="col-xl-6 col-lg-7 text-white">
   							<span>New Arrivals</span>
-  							<h2>Sport produck</h2>
-  							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum sus-pendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+  							<h2>Belanja produck</h2>
+  							<p>
+                                1. "Jajan mager, pasti hemat, harga merakyat".
+                                2. "Solusi jajan simpel siswa"
+                                3.  "solusi agar tidak ngantri jajan"
+                                4. "Jajan pasti mudah, murah, dan betah"
+                                5. "Harganya hemat, isinya Mantaaap!!"
+                                6. "Walaupun mager tapi perut jangan sampe laper
+                                7."mempermudah hidup"
+                            </p>
   							<a href="#" class="site-btn sb-line">DISCOVER</a>
   							<a href="{{ url('add-to-cart/'.$val->id) }}" class="site-btn sb-white">ADD TO PRODUK</a>
   						</div>
@@ -42,7 +50,7 @@
 							@endif
                 			<a href="{{ route('mobil.show', $val->id) }}"><img src="{{ asset( $val->gambar ) }}" alt=""></a>
     						<div class="pi-links">
-    							<a href="{{ url('add-to-cart/'.$val->id) }}" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+    							<a href="{{ url('add-to-cart/'.$val->id) }}" class="add-card"><i class="flaticon-bag"></i><span>PRODUK</span></a>
 								@if ($val->like($val->id))
 									<a href="{{ url('unlike/'.$val->id) }}" class="wishlist-btn"><i class="fa fa-heart"></i></a>
 								@else

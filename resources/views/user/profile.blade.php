@@ -3,7 +3,7 @@
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
-        <title>Laravel &mdash; CRUD</title>
+        <title>Halaman &mdash; Profil</title>
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="{{ asset('profile/css/bootstrap.css') }}">
         <link rel="stylesheet" href="{{ asset('profile/vendors/linericon/style.css') }}">
