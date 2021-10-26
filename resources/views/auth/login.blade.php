@@ -29,7 +29,8 @@
           <div class="col-md-12">
             <div class="form-block mx-auto">
               <div class="text-center mb-5">
-                <h3 class="text-uppercase">Login to <strong>Magerjajan</strong></h3>
+                <h3 class="text-uppercase">Login to <strong>Magerjajan</strong>
+              </h3>
               </div>
               <form action="{{ route('login') }}" method="post">
               @csrf
