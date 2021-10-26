@@ -45,7 +45,7 @@ class MerekController extends Controller
           'name' => $request->name,
         ]);
 
-        return redirect()->back()->with('success', 'Merek Berhasil Disimpan');
+        return redirect()->back()->with('success', 'katagori Berhasil Disimpan');
     }
 
     /**
@@ -90,7 +90,7 @@ class MerekController extends Controller
 
       Merek::whereId($id)->update($merek_data);
 
-      return redirect()->route('merek.index')->with('success', 'Merek Berhasil Diupdate');
+      return redirect()->route('merek.index')->with('success', 'katagori Berhasil Diupdate');
     }
 
     /**
@@ -104,6 +104,6 @@ class MerekController extends Controller
         $merek = Merek::findorfail($id);
         $merek->delete();
 
-        return redirect()->back()->with('success', 'Merek Berhasil Dihapus');
+        return redirect()->back()->with('success', 'katagori Berhasil Dihapus');
     }
 }
