@@ -40,7 +40,7 @@
                                             @endif
                                             <img src="{{ asset( $data->gambar ) }}" alt="">
                                             <div class="pi-links">
-                                                <a href="{{ url('add-to-cart/'.$data->id) }}" class="add-card"><i class="flaticon-bag"></i><span>ADD TO
+                                                <a href="{{ url('add-to-cart/'.$data->id) }}" class="add-card"><i class="flaticon-bag"></i><span>
                                                         PRODUC</span></a>
                                                 <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
                                             </div>
