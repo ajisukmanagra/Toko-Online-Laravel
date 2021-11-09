@@ -26,7 +26,7 @@
             <td>{{ $data->user->name }}</td>
             <td>{{ $data->namaMobil($data->mobil_id) }}</td>
             <td>{{ $data->quantity }}</td>
-            <td>$ {{ number_format($data->total, 0) }}</td>
+            <td>Rp. {{ number_format($data->total, 0) }}</td>
             <td>
               <span class="badge badge-warning text-white">{{ $data->payment_status }}</span>
             </td>

@@ -117,7 +117,7 @@
   icon: 'success',
   title: 'Success',
   showConfirmButton: false,
-  timer: 1400
+  timer: 300
 })
 </script>
 
