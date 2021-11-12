@@ -13,10 +13,10 @@
                   <li><a href="{{ route('order.tampil_cancel') }}">List Batal Order</a></li>
                 </ul>
               </li>
-              <li><a data-toggle="collapse" data-target="#demo" href="#">Mobil <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
+              <li><a data-toggle="collapse" data-target="#demo" href="#">Data <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
                 <ul id="demo" class="collapse dropdown-header-top">
-                  <li><a href="{{ route('mobil.index') }}">List Mobil</a></li>
-                  <li><a href="{{ route('mobil.tampil_hapus') }}">List Mobil Dihapus</a></li>
+                  <li><a href="{{ route('data.index') }}">List Data</a></li>
+                  <li><a href="{{ route('data.tampil_hapus') }}">List Data Dihapus</a></li>
                 </ul>
               </li>
               <li class="nav-item"><a href="{{ route('merek.index') }}" class="nav-link dropdown-toggle">Merek <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a></li>

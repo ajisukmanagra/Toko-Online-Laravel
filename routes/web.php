@@ -24,6 +24,8 @@ Route::get('/clear-cache', function () {
 
 Auth::routes();
 
+Auth::routes(['verify' => true]);
+
 Route::middleware(['auth'])->group(function () {
   Route::middleware(['role'])->group(function () {
     Route::resource('/merek', 'MerekController');
@@ -32,32 +34,38 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/order/tampil_bayar', 'OrderController@tampil_bayar')->name('order.tampil_bayar');
     Route::get('/order/tampil_pending', 'OrderController@tampil_pending')->name('order.tampil_pending');
     Route::resource('/akun', 'AkunController');
-    Route::resource('/mobil', 'MobilController');
-    Route::get('/create/mobil', 'MobilController@create')->name('create.mobil');
-    Route::get('/mobil/tampil_hapus', 'MobilController@tampil_hapus')->name('mobil.tampil_hapus');
-    Route::get('/mobil/restore/{id}', 'MobilController@restore')->name('mobil.restore');
-    Route::delete('/mobil/kill/{id}', 'MobilController@kill')->name('mobil.kill');
+    Route::resource('/produk', 'DataController');
+    Route::get('/create/data', 'DataController@create')->name('create.data');
+    Route::get('/data/tampil_hapus', 'DataController@tampil_hapus')->name('data.tampil_hapus');
+    Route::get('/data/restore/{id}', 'DataController@restore')->name('data.restore');
+    Route::post('/data/store', 'DataController@store')->name('data.store');
+    Route::get('/data/index', 'DataController@index')->name('data.index');
+    Route::post('/data/destroy', 'DataController@destroy')->name('data.destroy');
+    Route::get('/data/edit/{id}', 'DataController@edit')->name('data.edit');
+    Route::patch('/data/update/{id}', 'DataController@update')->name('data.update');
+    Route::get('/data/delete/{id}', 'DataController@delete')->name('data.delete');
+    Route::delete('/data/kill/{id}', 'DataController@kill')->name('data.kill');
   });
 
-  Route::get('/', 'MobilController@home')->name('home');
-  Route::get('/home', 'MobilController@home')->name('home');
-  Route::get('/favorite', 'MobilController@favorite')->name('favorite');
-  Route::get('/like/{id}', 'MobilController@like')->name('like');
-  Route::get('/unlike/{id}', 'MobilController@unlike')->name('unlike');
-  Route::get('/cart', 'MobilController@cart')->name('cart');
-  Route::get('/add-to-cart/{id}', 'MobilController@addToCart')->name('add-to-cart');
-  Route::get('/mobil/{id}', 'MobilController@show')->name('mobil.show');
+  Route::get('/', 'DataController@home')->name('home');
+  Route::get('/home', 'DataController@home')->name('home');
+  Route::get('/favorite', 'DataController@favorite')->name('favorite');
+  Route::get('/like/{id}', 'DataController@like')->name('like');
+  Route::get('/unlike/{id}', 'DataController@unlike')->name('unlike');
+  Route::get('/cart', 'DataController@cart')->name('cart');
+  Route::get('/add-to-cart/{id}', 'DataController@addToCart')->name('add-to-cart');
+  Route::get('/data/{id}', 'DataController@show')->name('data.show');
   Route::get('/profil/{id}', 'AkunController@profil')->name('profil');
   Route::get('/edit_profil/{id}', 'AkunController@edit_profil')->name('edit_profil');
   Route::post('/akun/simpan/{id}', 'AkunController@simpan')->name('akun.simpan');
-  Route::patch('/update_cart', 'MobilController@update_cart')->name('update_cart');
-  Route::delete('/remove', 'MobilController@remove')->name('remove');
+  Route::patch('/update_cart', 'DataController@update_cart')->name('update_cart');
+  Route::delete('/remove', 'DataController@remove')->name('remove');
   Route::delete('/order/{id}', 'OrderController@destroy')->name('order.destroy');
-  Route::get('/cekout', 'MobilController@cekout')->name('cekout');
-  Route::get('/category/{id}', 'MobilController@category')->name('category');
+  Route::get('/cekout', 'DataController@cekout')->name('cekout');
+  Route::get('/category/{id}', 'DataController@category')->name('category');
   Route::get('/history', 'OrderController@history')->name('history');
   Route::get('/pembayaran/success', 'OrderController@success')->name('pembayaran.success');
   Route::get('/pembayaran/{id}', 'OrderController@pembayaran')->name('pembayaran');
   Route::patch('/proses_pembayaran/{id}', 'OrderController@proses_pembayaran')->name('proses_pembayaran');
-  Route::post('/proses_cekout/{id}', 'MobilController@proses_cekout')->name('proses_cekout');
+  Route::post('/proses_cekout/{id}', 'DataController@proses_cekout')->name('proses_cekout');
 });

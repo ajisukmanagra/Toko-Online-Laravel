@@ -3,7 +3,7 @@
 <!-- Hero section -->
 <section class="hero-section">
     <div class="hero-slider owl-carousel">
-        @foreach ($car as $val)
+        @foreach ($basket as $val)
         <div class="hs-item set-bg" data-setbg="{{ asset( $val->gambar) }}">
             <div class="container">
                 <div class="row">
@@ -41,14 +41,14 @@
         </div>
         <?php $no=0; ?>
         <div class="product-slider owl-carousel">
-            @foreach ($car as $val)
+            @foreach ($basket as $val)
             <div class="product-item">
                 <div class="pi-pic">
                     @if ($no == 0)
                     <div class="tag-new">New</div>
                     @else
                     @endif
-                    <a href="{{ route('mobil.show', $val->id) }}"><img src="{{ asset( $val->gambar ) }}" alt=""></a>
+                    <a href="{{ route('data.show', $val->id) }}"><img src="{{ asset( $val->gambar ) }}" alt=""></a>
                     <div class="pi-links">
                         <a href="{{ url('add-to-cart/'.$val->id) }}" class="add-card"><i
                                 class="flaticon-bag"></i><span>PRODUK</span></a>
@@ -60,8 +60,8 @@
                     </div>
                 </div>
                 <div class="pi-text">
-                    <h6><a href="{{ route('mobil.show', $val->id) }}">Rp. {{ number_format($val->price, 0) }}</a></h6>
-                    <p><a href="{{ route('mobil.show', $val->id) }}">{{ $val->merek->name }} {{$val->type}}</a></p>
+                    <h6><a href="{{ route('data.show', $val->id) }}">Rp. {{ number_format($val->price, 0) }}</a></h6>
+                    <p><a href="{{ route('data.show', $val->id) }}">{{ $val->merek->name }} {{$val->type}}</a></p>
                 </div>
             </div>
             <?php $no++ ?>
@@ -79,7 +79,7 @@
         </div>
         <?php $no=0; ?>
         <div class="row">
-            @foreach ($mobil as $val)
+            @foreach ($data as $val)
             <div class="col-lg-3 col-sm-6">
                 <div class="product-item">
                     <div class="pi-pic">
@@ -87,7 +87,7 @@
                         <div class="tag-new">New</div>
                         @else
                         @endif
-                        <a href="{{ route('mobil.show', $val->id) }}"><img src="{{ asset( $val->gambar ) }}" alt=""></a>
+                        <a href="{{ route('data.show', $val->id) }}"><img src="{{ asset( $val->gambar ) }}" alt=""></a>
                         <div class="pi-links">
                             <a href="{{ url('add-to-cart/'.$val->id) }}" class="add-card"><i
                                     class="flaticon-bag"></i><span>PRODUK</span></a>
@@ -99,9 +99,9 @@
                         </div>
                     </div>
                     <div class="pi-text">
-                        <h6><a href="{{ route('mobil.show', $val->id) }}">Rp. {{ number_format($val->price, 0) }}</a>
+                        <h6><a href="{{ route('data.show', $val->id) }}">Rp. {{ number_format($val->price, 0) }}</a>
                         </h6>
-                        <p><a href="{{ route('mobil.show', $val->id) }}">{{ $val->merek->name }} {{$val->type}}</a></p>
+                        <p><a href="{{ route('data.show', $val->id) }}">{{ $val->merek->name }} {{$val->type}}</a></p>
                     </div>
                 </div>
             </div>

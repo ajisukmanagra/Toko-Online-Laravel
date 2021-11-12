@@ -54,7 +54,7 @@
                 </div>
                 
                 <div class="d-sm-flex mb-5 align-items-center">
-                  <label for ="remember" class="control control--checkbox mb-3 mb-sm-0"><span class="remember">{{ __('Remember Me') }}</span>
+                  <label for="remember" class="control control--checkbox mb-3 mb-sm-0"><span class="remember">{{ __('Remember Me') }}</span>
                     <input type="checkbox" checked="checked" id="remember"/>
                     <div class="control__indicator"></div>
                   </label>

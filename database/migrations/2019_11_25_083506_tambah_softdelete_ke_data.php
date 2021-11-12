@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class TambahSoftdeleteKeMobil extends Migration
+class TambahSoftdeleteKeData extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class TambahSoftdeleteKeMobil extends Migration
      */
     public function up()
     {
-      Schema::table('mobil', function (Blueprint $table) {
+      Schema::table('data', function (Blueprint $table) {
           $table->softDeletes();
       });
     }

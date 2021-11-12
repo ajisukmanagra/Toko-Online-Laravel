@@ -1,5 +1,5 @@
 @extends('template_backend.home')
-@section('halaman', 'Tambah Mobil')
+@section('halaman', 'Tambah Data')
 @section('content')
   @if (count($errors)>0)
     @foreach ($errors->all() as $error)
@@ -17,7 +17,7 @@
 
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
     <div class="welcome-wrapper shadow-reset res-mg-t mg-b-30">
-      <form action="{{ route('mobil.store') }}" method="post" enctype="multipart/form-data">
+      <form action="{{ route('data.store') }}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
           <label>katagori</label>

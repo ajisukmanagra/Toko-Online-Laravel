@@ -1,5 +1,5 @@
 @extends('template_backend.home')
-@section('halaman', 'Show Order Mobil')
+@section('halaman', 'Show Order Data')
 @section('content')
     @if (Session::has('success'))
         <div class="alert alert-success" role="alert">
@@ -15,8 +15,8 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="contact-img-v2">
-                                    <img src="{{ asset($order->mobil->gambar) }}" alt="" />
-                                    <h2><a class="contact-client-name">{{ $order->namaMobil($order->mobil_id) }}</a></h2>
+                                    <img src="{{ asset($order->data->gambar) }}" alt="" />
+                                    <h2><a class="contact-client-name">{{ $order->namaData($order->data_id) }}</a></h2>
                                 </div><br>
                                 <div class="contact-client-address">
                                     <h3>Quantity: {{ $order->quantity }}</h3>

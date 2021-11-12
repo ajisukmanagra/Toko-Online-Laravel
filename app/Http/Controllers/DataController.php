@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Auth;
-use App\Mobil;
+use App\Data;
 use App\Merek;
 use App\Order;
 use App\Favorite;
@@ -12,7 +12,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Session;
 
-class MobilController extends Controller
+class DataController extends Controller
 {
   /**
    * Display a listing of the resource.
@@ -21,8 +21,8 @@ class MobilController extends Controller
    */
   public function index()
   {
-    $mobil = Mobil::paginate(10);
-    return view('admin.mobil.index', compact('mobil'));
+    $data = Data::paginate(10);
+    return view('admin.data.index', compact('data'));
   }
 
   /**
@@ -33,7 +33,7 @@ class MobilController extends Controller
   public function create()
   {
     $merek = Merek::all();
-    return view('admin.mobil.create', compact('merek'));
+    return view('admin.data.create', compact('merek'));
   }
 
   /**
@@ -53,14 +53,14 @@ class MobilController extends Controller
     $gambar = $request->gambar;
     $new_gambar = date('Ymdhis') . "_" . $gambar->getClientOriginalName();
 
-    Mobil::create([
+    Data::create([
       'merek_id' => $request->merek_id,
       'type' => $request->type,
       'price' => $request->price,
-      'gambar' => 'uploads/mobil/' . $new_gambar,
+      'gambar' => 'uploads/data/' . $new_gambar,
     ]);
 
-    $gambar->move('uploads/mobil/', $new_gambar);
+    $gambar->move('uploads/data/', $new_gambar);
 
     return redirect()->back()->with('success', 'Postingan Anda Berhasil Disimpan');
   }
@@ -73,10 +73,10 @@ class MobilController extends Controller
    */
   public function show($id)
   {
-    $mobil = Mobil::findorfail($id);
+    $data = Data::findorfail($id);
     $merek = Merek::all();
-    $produk = Mobil::where('merek_id', $mobil->merek_id)->orderBy('created_at', 'DESC')->limit(5)->get();
-    return view('user.show', compact('mobil', 'merek', 'produk'));
+    $produk = Data::where('merek_id', $data->merek_id)->orderBy('created_at', 'DESC')->limit(5)->get();
+    return view('user.show', compact('data', 'merek', 'produk'));
   }
 
   /**
@@ -87,9 +87,9 @@ class MobilController extends Controller
    */
   public function edit($id)
   {
-    $mobil = Mobil::findorfail($id);
+    $data = Data::findorfail($id);
     $merek = Merek::all();
-    return view('admin.mobil.edit', compact('mobil', 'merek'));
+    return view('admin.data.edit', compact('data', 'merek'));
   }
 
   /**
@@ -106,27 +106,27 @@ class MobilController extends Controller
       'type' => 'required'
     ]);
 
-    $mobil = Mobil::findorfail($id);
+    $data = Data::findorfail($id);
 
     if ($request->gambar == true) {
       $gambar = $request->gambar;
       $new_gambar = date('Ymdhis') . "_" . $gambar->getClientOriginalName();
-      $gambar->move('uploads/mobil/', $new_gambar);
-      $mobil_data = [
+      $gambar->move('uploads/data/', $new_gambar);
+      $data_data = [
         'merek_id' => $request->merek_id,
         'type' => $request->type,
         'price' => $request->price,
-        'gambar' => 'uploads/mobil/' . $new_gambar,
+        'gambar' => 'uploads/data/' . $new_gambar,
       ];
     } else {
-      $mobil_data = [
+      $data_data = [
         'merek_id' => $request->merek_id,
         'price' => $request->price,
         'type' => $request->type,
       ];
     }
 
-    $mobil->update($mobil_data);
+    $data->update($data_data);
 
     return redirect()->back()->with('success', 'Postingan Anda Berhasil Diupdate');
   }
@@ -139,68 +139,68 @@ class MobilController extends Controller
    */
   public function destroy($id)
   {
-    $mobil = Mobil::findorfail($id);
-    $mobil->delete();
+    $data = Data::findorfail($id);
+    $data->delete();
 
-    return redirect()->back()->with('success', 'Postingan Anda Berhasil Dihapus (Silahkan cek trashed mobil)');
+    return redirect()->back()->with('success', 'Postingan Anda Berhasil Dihapus');
   }
 
   public function new()
   {
-    $mobil = Mobil::paginate(10);
+    $data = Data::paginate(10);
     $merek = Merek::all();
-    return view('admin.mobil.index', compact('mobil', 'merek'));
+    return view('admin.data.index', compact('data', 'merek'));
   }
 
   public function tampil_hapus()
   {
-    $mobil = Mobil::onlyTrashed()->paginate(10);
-    return view('admin.mobil.tampil_hapus', compact('mobil'));
+    $data = Data::onlyTrashed()->paginate(10);
+    return view('admin.data.tampil_hapus', compact('data'));
   }
 
   public function restore($id)
   {
-    $mobil = Mobil::withTrashed()->where('id', $id)->first();
-    $mobil->restore();
+    $data = Data::withTrashed()->where('id', $id)->first();
+    $data->restore();
 
-    return redirect()->back()->with('success', 'Postingan Anda Berhasil Direstore (Silahkan cek list mobil)');
+    return redirect()->back()->with('success', 'Postingan Anda Berhasil Direstore');
   }
 
   public function kill($id)
   {
-    $mobil = Mobil::withTrashed()->where('id', $id)->first();
-    $mobil->forceDelete();
+    $data = Data::withTrashed()->where('id', $id)->first();
+    $data->forceDelete();
 
     return redirect()->back()->with('success', 'Postingan Anda Berhasil Dihapus Secara Permanent');
   }
 
   public function home()
   {
-    $mobil = Mobil::orderBy('created_at', 'DESC')->get();
-    $car = Mobil::orderBy('created_at', 'DESC')->limit(5)->get();
+    $data = Data::orderBy('created_at', 'DESC')->get();
+    $basket = Data::orderBy('created_at', 'DESC')->limit(5)->get();
     $merek = Merek::all();
-    return view('user.index', compact('mobil', 'car', 'merek'));
+    return view('user.index', compact('data', 'basket', 'merek'));
   }
 
   public function cart()
   {
     $cart = session()->get('cart');
-    $mobil = Mobil::paginate(10);
+    $data = Data::paginate(10);
 
     $this->item['chart'] = $cart;
-    $this->item['mobil'] = $mobil;
+    $this->item['data'] = $data;
 
     $merek = Merek::all();
-    $produk = Mobil::orderBy('created_at', 'DESC')->limit(4)->get();
+    $produk = Data::orderBy('created_at', 'DESC')->limit(4)->get();
 
     return view('user.cart', compact('merek', 'produk'));
   }
 
   public function addToCart($id)
   {
-    $mobil = Mobil::findorfail($id);
+    $data = Data::findorfail($id);
 
-    if (!$mobil) {
+    if (!$data) {
       abort(404);
     }
 
@@ -213,12 +213,12 @@ class MobilController extends Controller
     }
 
     $cart[$id] = [
-      "mobil_id" => $mobil->id,
-      "name" => $mobil->type,
-      "brand" => $mobil->merek->name,
+      "data_id" => $data->id,
+      "name" => $data->type,
+      "brand" => $data->merek->name,
       "quantity" => 1,
-      "price" => $mobil->price,
-      "photo" => $mobil->gambar,
+      "price" => $data->price,
+      "photo" => $data->gambar,
     ];
 
     session()->put('cart', $cart);
@@ -252,10 +252,10 @@ class MobilController extends Controller
   public function cekout()
   {
     $cart = session()->get('cart');
-    $mobil = Mobil::paginate(10);
+    $data = Data::paginate(10);
 
     $this->item['chart'] = $cart;
-    $this->item['mobil'] = $mobil;
+    $this->item['data'] = $data;
 
     $merek = Merek::all();
 
@@ -283,7 +283,7 @@ class MobilController extends Controller
     foreach ($cart as $details) {
       Order::create([
         'user_id' => $id,
-        'mobil_id' => $details['mobil_id'],
+        'data_id' => $details['data_id'],
         'quantity' => $details['quantity'],
         'total' => $details['price'] * $details['quantity'],
         'payment_status' => 'Belum Dibayar',
@@ -300,18 +300,18 @@ class MobilController extends Controller
   public function category($id)
   {
     $judul = Merek::findorfail($id);
-    $mobil = Mobil::orderBy('created_at', 'DESC')->where('merek_id', $id)->paginate(12);
-    $new = Mobil::orderBy('created_at', 'DESC')->first();
+    $data = Data::orderBy('created_at', 'DESC')->where('merek_id', $id)->paginate(12);
+    $new = Data::orderBy('created_at', 'DESC')->first();
     $merek = Merek::all();
 
-    return view('user.category', compact('judul', 'mobil', 'new', 'merek'));
+    return view('user.category', compact('judul', 'data', 'new', 'merek'));
   }
 
   public function like($id)
   {
     Favorite::create([
       'user_id' => Auth::user()->id,
-      'mobil_id' => $id,
+      'data_id' => $id,
     ]);
 
     return redirect()->back()->with('success', 'Product added to favorite successfully!');
@@ -319,7 +319,7 @@ class MobilController extends Controller
 
   public function unlike($id)
   {
-    $like = Favorite::where('user_id', Auth::user()->id)->where('mobil_id', $id)->first();
+    $like = Favorite::where('user_id', Auth::user()->id)->where('data_id', $id)->first();
     $like->delete();
 
     return redirect()->back()->with('success', 'Product cancel to favorite successfully!');
@@ -328,9 +328,16 @@ class MobilController extends Controller
   public function favorite()
   {
     $like = Favorite::where('user_id', Auth::user()->id)->get();
-    $new = Mobil::orderBy('created_at', 'DESC')->first();
+    $new = Data::orderBy('created_at', 'DESC')->first();
     $merek = Merek::all();
 
     return view('user.favorite', compact('like', 'new', 'merek'));
+  }
+
+  public function delete($id)
+  {
+    $data = \App\data::find($id);
+    $data->delete($data);
+    return redirect()->back()->with('success', 'Product cancel to favorite successfully!');
   }
 }

@@ -83,7 +83,7 @@
                                 </ul>
                             </div><br><br>
                             <a href="/" class="btn btn-primary">Home</a>
-                            <a href="/create/mobil" class="btn btn-info btn-md">admin</a>
+                            <a href="/create/data" class="btn btn-info btn-md">admin</a>
                             <a href="{{ route('edit_profil', Auth::user()->id) }}" class="btn btn-success">Edit
                                 Profile</a>
                             <a href="{{ route('logout') }}" class="btn btn-danger"

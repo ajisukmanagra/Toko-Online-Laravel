@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMobilTable extends Migration
+class CreateDataTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateMobilTable extends Migration
      */
     public function up()
     {
-        Schema::create('mobil', function (Blueprint $table) {
+        Schema::create('data', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('merek_id');
             $table->string('type');
@@ -30,6 +30,6 @@ class CreateMobilTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mobil');
+        Schema::dropIfExists('data');
     }
 }

@@ -29,8 +29,8 @@
 
 				<div class="col-lg-9  order-1 order-lg-2 mb-5 mb-lg-0">
 					<div class="row">
-                        @if ($mobil->count() > 0)
-                            @foreach ($mobil as $data)
+                        @if ($data->count() > 0)
+                            @foreach ($data as $data)
                                 <div class="col-lg-4 col-sm-6">
                                     <div class="product-item">
                                         <div class="pi-pic">
@@ -52,7 +52,7 @@
                                     </div>
                                 </div>
                             @endforeach
-                            {{ $mobil->links() }}
+                            {{ $data->links() }}
                         @else
                             <div class="col-12 text-center">
                                 <h2>Tidak ada Produk</h2>

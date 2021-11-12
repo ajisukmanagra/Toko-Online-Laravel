@@ -24,7 +24,7 @@
           <tr>
             <td>{{ $result + $order->firstitem() }}</td>
             <td>{{ $data->user->name }}</td>
-            <td>{{ $data->namaMobil($data->mobil_id) }}</td>
+            <td>{{ $data->namaData($data->data_id) }}</td>
             <td>{{ $data->quantity }}</td>
             <td>Rp. {{ number_format($data->total, 0) }}</td>
             <td>

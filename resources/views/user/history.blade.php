@@ -22,9 +22,9 @@
             <div id="hot-post" class="row hot-post">
                 <div class="col-12 hot-post-left">
                     <div class="post post-row">
-                        <a class="post-img"><img src="{{ asset($data->mobil->gambar) }}"></a>
+                        <a class="post-img"><img src="{{ asset($data->data->gambar) }}"></a>
                         <div class="post-body">
-                            <h3 class="post-title">{{ $data->namaMobil($data->mobil_id) }}</h3>
+                            <h3 class="post-title">{{ $data->namaData($data->data_id) }}</h3>
                             <h3 class="post-title">Quantity: {{ $data->quantity }}</h3>
                             <h3 class="post-title">Total: Rp. {{ number_format( $data->total , 0) }}</h3>
                             <h3 class="post-title">Status:
